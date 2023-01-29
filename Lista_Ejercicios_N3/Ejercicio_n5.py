@@ -1,9 +1,14 @@
-def Suma(n):
-    p = 0
-    t=0
-    while p < n :
-        p = p +1
-        t = t + p
-    print('La suma de los numeros es de: %d' %(t))
 
-Suma(5)
+import Lista_Ejercicios_N3.Ejercicio_n1 as lab
+import os
+try:
+    lab.Suma(5)
+
+    lab.division(4,2)
+except Exception as e:
+    print('Hay un error')
+    print(e)
+else:
+    print(os.getcwd())
+finally:
+    print('proceso terminado')

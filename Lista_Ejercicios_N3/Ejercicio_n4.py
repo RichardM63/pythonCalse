@@ -13,10 +13,14 @@ class catalogo:
     def morstraragregado(self):
         for p in self.ListaCatalogo:
             print(p)
+try:
+    p1=Productos('Jabon')
+    print(p1)
+    producto=catalogo
+    producto.agregar(p1)
+    producto.morstraragregado()
+except Exception as e:
+    print('Hay un error')
+    print(e)
 
-p1=Productos('Jabon')
-print(p1)
-producto=catalogo
-producto.agregar(p1)
-producto.morstraragregado()
 
