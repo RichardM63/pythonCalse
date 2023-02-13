@@ -6,21 +6,24 @@ class Productos:
         return 'Producto: %s' %(self.product)
 class catalogo:
     ListaCatalogo = []
-    def __init__(self,listCatalogo:list=[]):
-        self.ListaCatalogo=listCatalogo
-    def agregar(self,p):
-        self.ListaCatalogo.append(p)
+
+    def __init__(self,listaCatalogo:list=[]):
+        self.ListaCatalogo=listaCatalogo
+
+    def agregar(self, pr):
+        self.ListaCatalogo.append(pr)
+
     def morstraragregado(self):
-        for p in self.ListaCatalogo:
-            print(p)
-try:
-    p1=Productos('Jabon')
-    print(p1)
-    producto=catalogo
-    producto.agregar(p1)
-    producto.morstraragregado()
-except Exception as e:
-    print('Hay un error')
-    print(e)
+        for i,pr in enumerate(self.ListaCatalogo):
+            i=i+1
+            print(i,pr)
+
+
+p1=Productos('Jabon')
+print(p1)
+producto=catalogo
+producto.agregar(p1)
+producto.morstraragregado()
+
 
 
